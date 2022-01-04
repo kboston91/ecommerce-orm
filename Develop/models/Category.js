@@ -6,42 +6,16 @@ class Category extends Model {}
 
 Category.init(
   {
-    Clothing: {
+      id: {
+        type: DataTypes.INTEGER,
+        autoincrement: true,
+        primaryKey: true
+      },
+      category_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1, 160]
       }
     },
-    Jewelry: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 160]
-      }
-    },
-    Cosmetics: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 160]
-      }
-    },
-    Haircare: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 160]
-      }
-    },
-    Homegoods: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 160]
-      }
-    },
-  },
   {
     sequelize,
     timestamps: false,
